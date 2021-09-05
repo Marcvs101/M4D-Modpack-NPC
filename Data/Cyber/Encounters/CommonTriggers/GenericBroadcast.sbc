@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <!--GenericBroadcast-->
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Cyber-Trigger-GenericBroadcast</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+        [MinCooldownMs:60000]
+        [MaxCooldownMs:180000]
+        [StartsReady:false]
+        [MaxActions:3]
+        [Actions:Cyber-Action-GenericBroadcast]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Cyber-Action-GenericBroadcast</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [Chance:15]
+        [UseChatBroadcast:true]
+        [ChatData:Cyber-Chat-GenericBroadcast]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Cyber-Chat-GenericBroadcast</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:-1]
+        [BroadcastRandomly:true]
+        [Author:Cyber Collective AI]
+        [Color:Red]
+
+        [ChatMessages: 62726f616463617374 20 7472616e736d697373696f6e ]
+        <!--[ChatAudio:Cyber-Screams]-->
+        [BroadcastChatType:Chat]
+        <!--[ChatVolumeMultiplier:0.25]-->
+
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

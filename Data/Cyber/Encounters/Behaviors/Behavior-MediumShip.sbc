@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Cyber-Behavior-MediumShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:Hunter]
+
+        [AutopilotData:Cyber-Autopilot-MediumShip-A]
+        [SecondaryAutopilotData:Cyber-Autopilot-MediumShip-B]
+
+        [TargetData:Cyber-Target-Main-A]
+        [OverrideTargetData:Cyber-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+        [UseBarrageFire:true]
+
+        [Triggers:Cyber-Trigger-GrindDamage]
+        [Triggers:Cyber-Trigger-GenericBroadcast]
+        [TriggerGroups:Cyber-TriggerGroup-Common]
+        [TriggerGroups:Cyber-TriggerGroup-HydrogenMan]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Cyber-Autopilot-MediumShip-A</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:true]
+        [WaypointTolerance:25]
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:150]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:2000]
+        [StrafeMaxDurationMs:3000]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Cyber-Autopilot-MediumShip-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:false]
+        [WaypointTolerance:40]
+        [IdealMinSpeed:40]
+        [IdealMaxSpeed:100]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:400]
+
+        [MinimumPlanetAltitude:400]
+        [IdealPlanetAltitude:500]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:2000]
+        [StrafeMaxDurationMs:5000]
+
+        [StrafeMinCooldownMs:2000]
+        [StrafeMaxCooldownMs:5000]
+
+        [StrafeMinimumTargetDistance:400]
+        [StrafeSpeedCutOff:60]
+        [StrafeDistanceCutOff:150]
+
+        [EngageDistanceSpace:600]
+        [EngageDistancePlanet:600]
+        [DisengageDistanceSpace:700]
+        [DisengageDistancePlanet:700]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>
