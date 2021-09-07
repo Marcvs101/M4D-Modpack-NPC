@@ -83,11 +83,11 @@
         [Color:Red]
 
         [ChatMessages: 72616d6d696e67 20 70726f746f636f6c ]
-        <!--[ChatAudio:Cyber-Growl]-->
         [BroadcastChatType:Chat]
-        <!--[ChatVolumeMultiplier:0.4]-->
 
       </Description>
+      <!--[ChatAudio:Cyber-Sound]-->
+      <!--[ChatVolumeMultiplier:0.4]-->
     </EntityComponent>
 
   </EntityComponents>

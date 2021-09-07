@@ -46,12 +46,12 @@
         <TypeId>Inventory</TypeId>
         <SubtypeId>Cyber-Command-CallCargoShip</SubtypeId>
       </Id>
+      <!--TODO Change command code-->
       <Description>
 
         [RivalAI Command]
 
         [CommandCode:AirTrafficPathDeviation]
-        <!--TODO Change command code-->
         [SingleRecipient:true]
         [SendWaypoint:true]
         [MatchSenderReceiverOwners:true]

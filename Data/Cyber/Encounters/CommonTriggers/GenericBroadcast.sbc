@@ -59,11 +59,11 @@
         [Color:Red]
 
         [ChatMessages: 62726f616463617374 20 7472616e736d697373696f6e ]
-        <!--[ChatAudio:Cyber-Screams]-->
         [BroadcastChatType:Chat]
-        <!--[ChatVolumeMultiplier:0.25]-->
 
       </Description>
+      <!--[ChatAudio:Cyber-Sound]-->
+      <!--[ChatVolumeMultiplier:0.4]-->
     </EntityComponent>
 
   </EntityComponents>
