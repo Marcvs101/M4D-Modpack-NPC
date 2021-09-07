@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Cyber-Behavior-Station</SubtypeId>
+        <SubtypeId>Cyber-Behavior-GroundStation</SubtypeId>
       </Id>
       <Description>
 

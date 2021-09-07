@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Cyber-Trigger-CallAtmoCargoShip</SubtypeId>
+        <SubtypeId>Cyber-Trigger-CallCargoShip</SubtypeId>
       </Id>
       <Description>
 
@@ -19,7 +19,7 @@
         [StartsReady:true]
         
         [MaxActions:-1]
-        [Actions:Cyber-Action-CallAtmoCargoShip]
+        [Actions:Cyber-Action-CallCargoShip]
 
       </Description>
 
@@ -28,14 +28,14 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Cyber-Action-CallAtmoCargoShip</SubtypeId>
+        <SubtypeId>Cyber-Action-CallCargoShip</SubtypeId>
       </Id>
       <Description>
 
         [RivalAI Action]
 
         [BroadcastCommandProfiles:true]
-        [CommandProfileIds:Cyber-Command-CallAtmoCargoShip]
+        [CommandProfileIds:Cyber-Command-CallCargoShip]
 
       </Description>
 
@@ -44,7 +44,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Cyber-Command-CallAtmoCargoShip</SubtypeId>
+        <SubtypeId>Cyber-Command-CallCargoShip</SubtypeId>
       </Id>
       <Description>
 
@@ -55,7 +55,7 @@
         [SingleRecipient:true]
         [SendWaypoint:true]
         [MatchSenderReceiverOwners:true]
-        [Waypoint:Cyber-Waypoint-CallAtmoCargoShip]
+        [Waypoint:Cyber-Waypoint-CallCargoShip]
 
       </Description>
 
@@ -64,7 +64,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Cyber-Waypoint-CallAtmoCargoShip</SubtypeId>
+        <SubtypeId>Cyber-Waypoint-CallCargoShip</SubtypeId>
       </Id>
       <Description>
 
@@ -74,8 +74,6 @@
         [RelativeEntity:Self]
         [MinDistance:60]
         [MaxDistance:101]
-        [MinAltitude:60]
-        [MaxAltitude:101]
 
       </Description>
 
