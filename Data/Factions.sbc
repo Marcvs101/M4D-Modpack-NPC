@@ -5,12 +5,12 @@
     <Faction Tag="UAC" Founder="Thomas Kelliher">
       <Id>
         <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
-        <SubtypeId>Union Aerospace Corporation</SubtypeId>
+        <SubtypeId>UAC</SubtypeId>
       </Id>
       <DisplayName>Union Aerospace Corporation</DisplayName>
 	  <Description>Multi-planetary conglomerate operating on Mars</Description>
       <IsDefault>true</IsDefault>
-	  <DefaultRelation>Enemies</DefaultRelation>
+	  <DefaultRelation>Neutral</DefaultRelation>
 	  <AcceptHumans>false</AcceptHumans>
       <AutoAcceptMember>false</AutoAcceptMember>
     </Faction>
