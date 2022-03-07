@@ -2,30 +2,36 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Factions>
   
-    <Faction Tag="UAC" Founder="Thomas Kelliher">
+    <Faction Tag="-UAC-" Founder="Dr. Samuel Hayden">
       <Id>
         <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
         <SubtypeId>UAC</SubtypeId>
       </Id>
       <DisplayName>Union Aerospace Corporation</DisplayName>
 	  <Description>Multi-planetary conglomerate operating on Mars</Description>
-      <IsDefault>true</IsDefault>
-	  <DefaultRelation>Neutral</DefaultRelation>
-	  <AcceptHumans>false</AcceptHumans>
-      <AutoAcceptMember>false</AutoAcceptMember>
+    <IsDefault>true</IsDefault>
+	  <DefaultRelation>Friends</DefaultRelation> <!--Enemies, Neutral, Friends-->
+		<AcceptHumans>false</AcceptHumans>
+		<AutoAcceptMember>false</AutoAcceptMember>
+		<StartingBalance>1000000</StartingBalance>
+		<Type>None</Type> <!--None, Miner, Trader, Builder-->
+		<DiscoveredByDefault>false</DiscoveredByDefault>
     </Faction>
 	
-	<Faction Tag="CYB" Founder="AI">
+	  <Faction Tag="CYBR" Founder="AI">
       <Id>
         <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
         <SubtypeId>Cyber</SubtypeId>
       </Id>
       <DisplayName>Cyber</DisplayName>
 	  <Description>01100001 01101100 01101100 00100000 01111001 01101111 01110101 01110010 00100000 01100010 01100001 01110011 01100101 00100000 01100001 01110010 01100101 00100000 01100010 01100101 01101100 01101111 01101110 01100111 00100000 01110100 01101111 00100000 01110101 01110011</Description>
-      <IsDefault>true</IsDefault>
-	  <DefaultRelation>Enemies</DefaultRelation>
-	  <AcceptHumans>false</AcceptHumans>
-      <AutoAcceptMember>false</AutoAcceptMember>
+    <IsDefault>true</IsDefault>
+		<DefaultRelation>Enemies</DefaultRelation> <!--Enemies, Neutral, Friends-->
+		<AcceptHumans>false</AcceptHumans>
+		<AutoAcceptMember>false</AutoAcceptMember>
+		<StartingBalance>1000000</StartingBalance>
+		<Type>None</Type> <!--None, Miner, Trader, Builder-->
+		<DiscoveredByDefault>false</DiscoveredByDefault>
     </Faction>
 	
   </Factions>
