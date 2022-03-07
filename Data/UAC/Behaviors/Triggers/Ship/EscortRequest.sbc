@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Trigger-EscortRequest</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:30000]
+        [MaxCooldownMs:120001]
+        [StartsReady:true]
+        
+        [MaxActions:1]
+        [Actions:M101-UAC-Action-EscortRequest]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Action-EscortRequest</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [BroadcastCommandProfiles:true]
+        [CommandProfileIds:M101-UAC-Command-EscortRequest]
+
+        [UseChatBroadcast:true]
+        [ChatData:M101-UAC-Chat-EscortRequest]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Command-EscortRequest</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Command]
+
+        [CommandCode:M101-UAC-EscortRequest]
+        [SingleRecipient:true]
+        [IgnoreAntennaRequirement:true]
+        [IgnoreReceiverAntennaRequirement:true]
+        [Radius:10000]
+        [MatchSenderReceiverOwners:true]
+        [EscortRequestSlot:true]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Chat-EscortRequest</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [Chance:50]
+        [MaxChats:1]
+        [BroadcastRandomly:true]
+        [Author:UAC Pilot]
+        [Color:Blue]
+
+        [ChatMessages: This is {AntennaName}, reporting for escort duty.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:{AntennaName} checking in.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Qui {AntennaName}, stiamo entrando nel vostro spazio aereo.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

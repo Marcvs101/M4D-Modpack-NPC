@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Trigger-SwitchBehaviorTimer</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:600000]
+        [MaxCooldownMs:1200001]
+        [StartsReady:false]
+        
+        [MaxActions:1]
+        [Actions:M101-UAC-Action-SwitchBehaviorTimer]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Action-SwitchBehaviorTimer</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [ChangeBehaviorSubclass:True]
+        [NewBehaviorSubclass:Fighter]
+
+        [ChangeAutopilotProfile:true]
+        [AutopilotProfile:Secondary]
+
+      </Description>
+
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Behavior-Skimmer</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:Patrol]
+
+        [AutopilotData:M101-UAC-AutoPilot-Skimmer]
+        [SecondaryAutopilotData:M101-UAC-AutoPilot-Skimmer-B]
+
+        [Triggers:M101-UAC-Trigger-Drone-HandleCallForHelp]
+        [Triggers:M101-UAC-Trigger-Drone-CallShip]
+        [Triggers:M101-UAC-Trigger-Drone-CallDrone]
+        [Triggers:M101-UAC-Trigger-Drone-Damage]
+        [Triggers:M101-UAC-Trigger-Drone-PlayerClose]
+        [Triggers:M101-UAC-Trigger-SwitchBehaviorTimer]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-Skimmer</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [FlyLevelWithGravity:true]
+        [LevelWithGravityWhenIdle:true]
+        [UseSurfaceHoverThrustMode:true]
+        [HoverPathStepDistance:40]
+
+        [RotationMultiplier:0.4]
+
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:3]
+
+        [MinimumPlanetAltitude:10]
+        [IdealPlanetAltitude:30]
+        [AltitudeTolerance:5]
+
+        [CollisionEvasionWaypointCalculatedAwayFromEntity:true]
+        [WaypointTolerance:30]
+        [WaypointWaitTimeTrigger:30]
+
+        [OffsetPlanetMinDistFromTarget:150]
+        [OffsetPlanetMaxDistFromTarget:300]
+        [OffsetPlanetMinTargetAltitude:-200]
+        [OffsetPlanetMaxTargetAltitude:200]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-Skimmer-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [FlyLevelWithGravity:false]
+        [LevelWithGravityWhenIdle:true]
+        [UseSurfaceHoverThrustMode:true]
+        [HoverPathStepDistance:40]
+
+        [RotationMultiplier:0.4]
+
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:3]
+
+        [MinimumPlanetAltitude:10]
+        [IdealPlanetAltitude:30]
+        [AltitudeTolerance:5]
+
+        [CollisionEvasionWaypointCalculatedAwayFromEntity:true]
+        [WaypointTolerance:30]
+        [WaypointWaitTimeTrigger:30]
+
+        [OffsetPlanetMinDistFromTarget:150]
+        [OffsetPlanetMaxDistFromTarget:300]
+        [OffsetPlanetMinTargetAltitude:-200]
+        [OffsetPlanetMaxTargetAltitude:200]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

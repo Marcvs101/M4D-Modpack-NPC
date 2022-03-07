@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Trigger-Ship-Damage</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Damage]
+
+        [DamageTypes:Any]
+
+        [ExcludedDamageTypes:Environment]
+        [ExcludedDamageTypes:Deformation]
+        [ExcludedDamageTypes:Fire]
+
+        [MinCooldownMs:60000]
+        [MaxCooldownMs:60001]
+
+        [StartsReady:true]
+        [MaxActions:3]
+        [Actions:M101-UAC-Action-Ship-Damage]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Action-Ship-Damage</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [BroadcastCommandProfiles:true]
+        [CommandProfileIds:M101-UAC-Command-CallForHelp]
+
+        [ChangeAutopilotProfile:true]
+        [AutopilotProfile:Primary]
+
+        [ChangeAutopilotSpeed:true]
+        [NewAutopilotSpeed:45]
+
+        [CancelWaitingAtWaypoint:true]
+        [SwitchToNextWaypoint:true]
+
+        [UseChatBroadcast:true]
+        [ChatData:M101-UAC-Chat-Ship-Damage]
+
+        [EnableTriggers:true]
+        [EnableTriggerNames:M101-UAC-Trigger-ReturnToSpeed]
+
+        [ResetCooldownTimeOfTriggers:true]
+        [ResetTriggerCooldownNames:M101-UAC-Trigger-ReturnToSpeed]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Chat-Ship-Damage</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:3]
+        [BroadcastRandomly:true]
+        [Author:UAC Pilot]
+        [Color:Blue]
+
+        [ChatMessages: Mayday! Mayday! {AntennaName} requesting immediate back-up!]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages: To all UAC personnel, {AntennaName} is under attack!]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages: They don't pay me enough for this!]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages: Mayday! Mayday! Qui {AntennaName} siamo sotto attacco!]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Command-CallForHelp</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Command]
+
+        [CommandCode:M101-UAC-CallForHelp]
+        [SingleRecipient:false]
+        [SendDamagerEntityId:true]
+        [MatchSenderReceiverOwners:true]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

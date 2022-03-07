@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Behavior-Fighter</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:Fighter]
+
+        [AutopilotData:M101-UAC-AutoPilot-Fighter]
+        [SecondaryAutopilotData:M101-UAC-AutoPilot-Fighter-B]
+
+        [Triggers:M101-UAC-Trigger-Ship-HandleCallForHelp]
+        [Triggers:M101-UAC-Trigger-Ship-PlayerClose]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-Fighter</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:50]
+        [FlyLevelWithGravity:false]
+        [LevelWithGravityWhenIdle:true]
+
+        [RotationMultiplier:0.4]
+
+        [IdealMinSpeed:50]
+        [IdealMaxSpeed:100]
+        [MaxSpeedTolerance:3]
+
+        [MinimumPlanetAltitude:700]
+        [IdealPlanetAltitude:1000]
+        [AltitudeTolerance:5]
+
+        [CollisionEvasionWaypointCalculatedAwayFromEntity:true]
+        [WaypointTolerance:50]
+        [WaypointWaitTimeTrigger:120]
+
+        [OffsetSpaceMinDistFromTarget:900]
+        [OffsetSpaceMaxDistFromTarget:1000]
+        [OffsetPlanetMinDistFromTarget:100]
+        [OffsetPlanetMaxDistFromTarget:150]
+        [OffsetPlanetMinTargetAltitude:900]
+        [OffsetPlanetMaxTargetAltitude:1100]
+
+        [ReverseOffsetDistAltAboveHeight:true]
+        [ReverseOffsetHeight:1300]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-Fighter-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:50]
+        [FlyLevelWithGravity:false]
+        [LevelWithGravityWhenIdle:true]
+
+        [IdealMinSpeed:50]
+        [IdealMaxSpeed:100]
+        [MaxSpeedTolerance:3]
+
+        [MinimumPlanetAltitude:500]
+        [IdealPlanetAltitude:700]
+        [AltitudeTolerance:5]
+
+        [CollisionEvasionWaypointCalculatedAwayFromEntity:true]
+        [WaypointTolerance:50]
+        [WaypointWaitTimeTrigger:120]
+
+        [MinAngleForLeveledDescent:135]
+        [MaxAngleForLeveledAscent:90]
+
+        [OffsetSpaceMinDistFromTarget:900]
+        [OffsetSpaceMaxDistFromTarget:1000]
+        [OffsetPlanetMinDistFromTarget:100]
+        [OffsetPlanetMaxDistFromTarget:150]
+        [OffsetPlanetMinTargetAltitude:900]
+        [OffsetPlanetMaxTargetAltitude:1100]
+
+        [ReverseOffsetDistAltAboveHeight:true]
+        [ReverseOffsetHeight:1300]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

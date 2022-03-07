@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Behavior-EscortFighter</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:Escort]
+
+        [AutopilotData:M101-UAC-AutoPilot-EscortFighter]
+        [SecondaryAutopilotData:M101-UAC-AutoPilot-EscortFighter-B]
+
+        [Triggers:M101-UAC-Trigger-EscortRequest]
+        [Triggers:M101-UAC-Trigger-ReturnToDespawn]
+        [Triggers:M101-UAC-Trigger-Ship-PlayerClose]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-EscortFighter</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:50]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:12]
+        [IdealMaxSpeed:80]
+        [MaxSpeedTolerance:3]
+
+        [MinimumPlanetAltitude:1000]
+        [IdealPlanetAltitude:1200]
+        [AltitudeTolerance:5]
+
+        [WaypointTolerance:50]
+        [WaypointWaitTimeTrigger:120]
+
+        [MinAngleForLeveledDescent:135]
+        [MaxAngleForLeveledAscent:90]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-EscortFighter-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:50]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:12]
+        [IdealMaxSpeed:25]
+        [MaxSpeedTolerance:3]
+
+        [MinimumPlanetAltitude:100]
+        [IdealPlanetAltitude:250]
+        [AltitudeTolerance:5]
+
+        [WaypointTolerance:50]
+        [WaypointWaitTimeTrigger:60]
+
+        [MinAngleForLeveledDescent:135]
+        [MaxAngleForLeveledAscent:90]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

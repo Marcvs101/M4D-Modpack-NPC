@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Trigger-Drone-CallShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:CommandReceived]
+        [CommandReceiveCode:M101-UAC-CallShip]
+
+        [StartsReady:true]
+        [MaxActions:1]
+        [Actions:M101-UAC-Action-Drone-CallShip]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Action-Drone-CallShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [AddWaypointFromCommand:true]
+        [UseChatBroadcast:true]
+        [ChatData:M101-UAC-Chat-Drone-CallShip]
+
+        [ToggleBlocksOfType:true]
+
+        [BlockTypesToToggle:MyObjectBuilder_Parachute/LgParachute]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_Parachute/SmParachute]
+        [BlockTypeToggles:Off]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Chat-Drone-CallShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:1]
+        [BroadcastRandomly:true]
+        [Author:UAC Drone]
+        [Color:Blue]
+
+        [ChatMessages:{AntennaName} handshake protocol status: ACK. Initiating manouver.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:{AntennaName} approaching ground installation.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:{AntennaName} ha ricevuto i protocolli d'attracco. Eseguendo.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Ordine ricevuto. {AntennaName} in movimento.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

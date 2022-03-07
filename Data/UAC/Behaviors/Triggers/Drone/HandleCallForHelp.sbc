@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Trigger-Drone-HandleCallForHelp</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:CommandReceived]
+        [CommandReceiveCode:M101-UAC-CallForHelp]
+
+        [StartsReady:true]
+        [MaxActions:1]
+        [Actions:M101-UAC-Action-Drone-HandleCallForHelp]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Action-Drone-HandleCallForHelp</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [ChangeBehaviorSubclass:True]
+        [NewBehaviorSubclass:Fighter]
+
+
+        [ChangeAutopilotProfile:true]
+        [AutopilotProfile:Secondary]
+
+
+        [SwitchToReceivedTarget:true]
+        [InheritLastAttackerFromCommand:true]
+
+
+        [UseChatBroadcast:true]
+        [ChatData:M101-UAC-Chat-Drone-HandleCallForHelp]
+
+
+        [ToggleBlocksOfType:true]
+
+        [BlockTypesToToggle:MyObjectBuilder_Parachute/LgParachute]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_Parachute/SmParachute]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/SmallLight]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/SmallBlockSmallLight]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/LargeBlockLight_1corner]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/LargeBlockLight_2corner]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/SmallBlockLight_1corner]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/SmallBlockLight_2corner]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/LargeLightPanel]
+        [BlockTypeToggles:Off]
+
+        [BlockTypesToToggle:MyObjectBuilder_LightingBlockDefinition/SmallLightPanel]
+        [BlockTypeToggles:Off]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Chat-Drone-HandleCallForHelp</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:1]
+        [BroadcastRandomly:true]
+        [Author:UAC Drone]
+        [Color:Blue]
+
+        [ChatMessages:{AntennaName} has recieved a distress call. AEGIS protocol in action.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:{AntennaName} responding to protocol 127-2.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Protocolli di difesa attivati.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

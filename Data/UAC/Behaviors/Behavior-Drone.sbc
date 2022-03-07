@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-Behavior-Drone</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:Patrol]
+
+        [AutopilotData:M101-UAC-AutoPilot-Drone]
+        [SecondaryAutopilotData:M101-UAC-AutoPilot-Drone-B]
+
+        [Triggers:M101-UAC-Trigger-Drone-HandleCallForHelp]
+        [Triggers:M101-UAC-Trigger-Drone-CallShip]
+        [Triggers:M101-UAC-Trigger-Drone-CallDrone]
+        [Triggers:M101-UAC-Trigger-Drone-Damage]
+        [Triggers:M101-UAC-Trigger-Drone-PlayerClose]
+        [Triggers:M101-UAC-Trigger-SwitchBehaviorTimer]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-Drone</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+
+        [RotationMultiplier:0.4]
+
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:3]
+
+        [CollisionEvasionWaypointCalculatedAwayFromEntity:true]
+        [WaypointTolerance:30]
+        [WaypointWaitTimeTrigger:30]
+
+        [OffsetSpaceMinDistFromTarget:150]
+        [OffsetSpaceMaxDistFromTarget:300]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>M101-UAC-AutoPilot-Drone-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+
+        [RotationMultiplier:0.4]
+
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:3]
+
+        [CollisionEvasionWaypointCalculatedAwayFromEntity:true]
+        [WaypointTolerance:30]
+        [WaypointWaitTimeTrigger:30]
+
+        [OffsetSpaceMinDistFromTarget:150]
+        [OffsetSpaceMaxDistFromTarget:300]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>
